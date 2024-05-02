@@ -1,9 +1,10 @@
-function search(search_value) {
+
+function search(search_value){
     $.ajax({
         url: './models/searchEngine.php',
         type: 'POST',
         data: { 'search': search_value },
-        success: function(response) {
+        success: function(response){
             $('#results').html(response);
         }
     });
